@@ -4,12 +4,12 @@
 const hiddenMessage = ["X", "X", "X", "X", "W", "X", "E", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "L", "X", "X", "X", "X", "X", "X", "X", "X", "X", " ", "X", "X", "X", "X", "X", "X", "X", "X", "D", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "O", "X", "X", "X", "X", "X", "X", "N", "X", "X", "X", "X", "E", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", ",", "X", " ", "X"]
 
 // Your code goes here
-let unlockedMessage = [];
+let unlockedMessage = '';
 
 function decode(array) {
     for (let i = 0; i < array.length; i++) {
         if (!(array[i] === "X")) {
-            unlockedMessage.push(array[i]);
+            unlockedMessage += array[i];
         }
     }
 
@@ -29,16 +29,23 @@ const hiddenCode = "XXXXXXXXXXXXXXXXXXXXXXXXXXXCXXXXXXXOXXXXXDXXXXXXXXXXXXXXXEXX
 
 let hiddenCodeArray = hiddenCode.split(" ");
 
+console.log(hiddenCode.split(""));
+
 //console.log(hiddenCodeArray);
+
+if (typeof myVar !== 'string' || myVar instanceof String){
+    let my = " ...param"
+}
 
 
 let unlockedCode = [];
+if (messages.array)
 
 
 function decode2(array) {
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array[i].length; j++) {
-            if (!(array[i][j] === "X") && !(array[i][j] % 2 == 0)) {
+            if (!(array[i][j] === "X") &&!(array[i][j] === ",") && !(array[i][j] % 2 == 0)) {
                 unlockedCode.push(array[i][j]);
             }
         }
@@ -47,10 +54,19 @@ function decode2(array) {
 }
 
 decode2(hiddenCodeArray);
-console.log(unlockedCode);
+console.log(unlockedCode.join(''));
 
 
 
 
+// const array1 = [1, 2, 3, 4];
 
-// Your code goes here
+// // 0 + 1 + 2 + 3 + 4
+// const initialValue = 0;
+// const sumWithInitial = array1.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue,
+//   initialValue
+// );
+
+// console.log(sumWithInitial);
+

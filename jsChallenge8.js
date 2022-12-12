@@ -17,8 +17,8 @@ function tipsCalc(array) {
     }
 }
 
-let average;
 function calcAverage(array){
+    let average=0;
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
         sum += array[i];
@@ -29,7 +29,8 @@ function calcAverage(array){
 
 tipsCalc(bills);
 
-calcAverage(totals);
+const myAverage = calcAverage(totals);
+
 
 
 
@@ -39,7 +40,7 @@ console.log("tips : "+tips);
 
 console.log("totals : "+totals);
 
-console.log("average : "+average);
+console.log("average : "+myAverage);
 
 
 

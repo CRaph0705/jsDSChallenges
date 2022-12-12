@@ -7,8 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script src = "jsChallenge5.js"></script>
-
-
+    <script src="jsChallenge11.js"></script>
 </body>
 </html>
